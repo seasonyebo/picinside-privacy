@@ -1,1 +1,40 @@
-:root{color-scheme:dark;--bg:#0d1219;--panel:#18222e;--line:#344351;--txt:#edf3f8;--muted:#bbcad5;--accent:#c7d9e8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Hiragino Kaku Gothic ProN",system-ui,sans-serif;padding:20px}.container{width:min(100%,760px);margin:0 auto}.hero{background:linear-gradient(140deg,#1b2d3d,#101b27);border:1px solid var(--line);border-radius:18px;padding:26px;margin-bottom:18px}.brand{font-size:24px;font-weight:800;text-decoration:none}h1{font-size:clamp(24px,5vw,32px);line-height:1.35;margin:10px 0}h2{font-size:19px;color:var(--accent);line-height:1.5}p,li{color:var(--muted)}.date{font-size:14px}.languages,.sections,.home-links{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.languages a,.sections a,.home-links a{display:inline-flex;align-items:center;min-height:44px;border:1px solid var(--line);border-radius:10px;padding:7px 13px;background:#1b2734;text-decoration:none}.languages [aria-current="page"],.sections [aria-current="page"]{background:#30465b;border-color:#7392ab;color:white;font-weight:700}.notice,section{border:1px solid var(--line);border-radius:13px;padding:18px 21px;margin:16px 0;background:var(--panel)}.notice{border-color:#8b9aa6;background:#1d2b38}section h2{margin-top:0}a{color:#bde2ff;overflow-wrap:anywhere}a:hover{text-decoration:underline}li{margin:5px 0}code{overflow-wrap:anywhere}footer{margin:25px 0;padding:22px 4px;border-top:1px solid var(--line);font-size:14px}footer p{margin:4px 0}@media(max-width:500px){body{padding:12px;font-size:15px}.hero,section{padding:17px}.home-links a{flex-grow:1}h2{font-size:18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #242424; background: #faf9f6; }
+* { box-sizing: border-box; }
+body { margin: 0 auto; padding: 0 1.25rem; max-width: 52rem; font-size: 1rem; line-height: 1.8; overflow-wrap: anywhere; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid #d7d2c7; }
+.brand { color: #202020; font-size: 1.25rem; font-weight: 700; text-decoration: none; }
+.status { color: #69501e; letter-spacing: .08em; font-size: .875rem; }
+main { padding: 1.25rem 0 2.5rem; }
+nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-bottom: .5rem; }
+a { color: #684900; text-underline-offset: .2em; }
+nav a, .brand { display: inline-flex; align-items: center; min-height: 44px; }
+a:focus-visible { outline: 3px solid #926915; outline-offset: 4px; }
+[aria-current] { font-weight: 700; text-decoration-thickness: 2px; }
+h1 { font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.3; margin: 1.5rem 0; }
+h2 { font-size: 1.2rem; line-height: 1.5; margin: 2rem 0 .6rem; }
+p { margin: .5rem 0 1rem; }
+.notice { border-left: 3px solid #9b742a; padding: .8rem 1rem; background: #f1ebdd; }
+.date, footer { color: #575550; }
+footer { border-top: 1px solid #d7d2c7; padding: 1.25rem 0 2rem; }
+.languages { list-style: none; padding: 0; }
+.languages li { margin: 2rem 0; }
+.contact-card { border: 1px solid #d7d2c7; border-radius: .5rem; padding: 1rem; margin: 1.5rem 0; }
+.contact-card h2 { margin-top: 0; }
+dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: .5rem 1rem; margin: 0; }
+dt { font-weight: 600; }
+dd { margin: 0; min-width: 0; }
+.toc { display: block; border-bottom: 1px solid #d7d2c7; padding-bottom: 1rem; }
+.toc ul { margin: 0; padding-left: 1.5rem; }
+.toc a { min-height: 44px; }
+section { scroll-margin-top: 1rem; }
+[data-inquiries] label { display: block; font-weight: 600; margin-top: .75rem; }
+[data-inquiries] input, [data-inquiries] textarea { width: 100%; font: inherit; padding: .65rem; color: inherit; background: white; border: 1px solid #8b8270; border-radius: .4rem; }
+[data-inquiries] textarea { font-size: .95rem; line-height: 1.6; }
+[data-inquiries] details { border: 1px solid #d7d2c7; padding: .8rem; margin: .8rem 0; border-radius: .5rem; }
+[data-inquiries] summary, [data-inquiries] button, [data-compose] { min-height: 44px; cursor: pointer; }
+[data-inquiries] summary { font-weight: 600; }
+[data-inquiries] button { font: inherit; padding: .45rem .75rem; color: #684900; background: #f1ebdd; border: 1px solid #b8a67d; border-radius: .4rem; white-space: normal; }
+[data-compose] { display: inline-flex; align-items: center; }
+[data-inquiries] :is(button, input, textarea, summary):focus-visible { outline: 3px solid #926915; outline-offset: 3px; }
+@media (max-width: 32rem) { dl { grid-template-columns: minmax(0, 1fr); gap: .2rem; } dd { margin-bottom: .7rem; } }
+@media print { body { max-width: none; background: white; } nav { display: none; } }
